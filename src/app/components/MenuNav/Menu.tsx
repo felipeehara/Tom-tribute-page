@@ -12,7 +12,7 @@ export const Menu: React.FC<menuProps> = (mt) => {
     const backGround = useRef<HTMLDivElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
-    const styleMenu = 'border-b-2 border-b-gray-600 block mb-1 text-white md:text-yellow-400';
+    const styleMenu = 'border-b-2 border-b-gray-600 block mb-1 text-white md:text-yellow-400 ';
 
     const handleClick = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -23,7 +23,9 @@ export const Menu: React.FC<menuProps> = (mt) => {
 
     return (
         <div className='fixed md:static transition-opacity'>
-            <div ref={backGround} className={`w-screen h-screen absolute transition-opacity duration-300 ${isMenuOpen ? 'backdrop-blur' : 'backdrop-blur-0'}`}></div>
+            {isMenuOpen && ( 
+                <div ref={backGround} className={`w-screen h-screen absolute transition-opacity duration-300 backdrop-blur`}></div>
+            )}
             <div className='w-10 absolute'>
                 <button className="toggle md:hidden z-50 m-2 absolute" onClick={handleClick}>
                     <Image src={menuIMG} alt='logo-MENU' />

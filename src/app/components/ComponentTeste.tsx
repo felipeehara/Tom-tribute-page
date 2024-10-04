@@ -19,17 +19,17 @@ export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => 
   };
 
   const renderDesc = () => {
-    // Exibe toda a descrição se o botão não estiver aparecendo
+
     if (!isLargeScreen && desc.length <= 300) {
       return desc; 
     }
 
-    // Exibe a descrição truncada se o botão estiver aparecendo e a tela não for grande
+
     if (!isLargeScreen && desc.length > maxLength) {
       return isExpanded ? desc : `${desc.substring(0, maxLength)}...`;
     }
 
-    // Exibe a descrição completa para telas grandes ou se expandida
+
     return desc;
   };
 
@@ -47,17 +47,17 @@ export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => 
       }
     };
 
-    handleResize(); // Verifica a largura inicial
-    window.addEventListener('resize', handleResize); // Adiciona o listener de resize
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
 
     return () => {
-      window.removeEventListener('resize', handleResize); // Limpa o listener
+      window.removeEventListener('resize', handleResize); 
     };
   }, []);
 
-  // Defina os valores fixos de width e height
-  const imageWidth = 160; // Defina o valor fixo desejado
-  const imageHeight = 260; // Defina o valor fixo desejado
+
+  const imageWidth = 160; 
+  const imageHeight = 260; 
 
   return (
     <div className='flex justify-center'>
