@@ -25,13 +25,12 @@ export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => 
     return `${desc.substring(0, maxLength)}...`;
   };
 
-  // Hook para verificar a largura da tela e definir maxLength
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsLargeScreen(width >= 1024);
 
-      // Ajuste o maxLength conforme a largura da tela
       if (width >= 1200) {
         setMaxLength(300);
       } else if (width >= 768) {
@@ -77,9 +76,7 @@ export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => 
               {!isLargeScreen && desc.length > maxLength && (
                 <button
                   onClick={toggleExpanded}
-                  className='text-blue-500 ml-2 '
-                  style={{ touchAction: "manipulation" }}
-                >
+                  className='text-blue-500 ml-2 relative z-10'>
                   {isExpanded ? 'Ler menos' : 'Ler mais'}
                 </button>
               )}
