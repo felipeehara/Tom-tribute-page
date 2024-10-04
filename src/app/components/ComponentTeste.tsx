@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 interface FilmsProps {
-    title: string;
-    img: StaticImageData | string;
-    alt: string;
-    desc: string;
+  title: string;
+  img: StaticImageData | string;
+  alt: string;
+  desc: string;
 }
 
 export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => {
@@ -19,12 +19,19 @@ export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => 
   };
 
   const renderDesc = () => {
-    if (isLargeScreen || isExpanded || desc.length <= maxLength) {
-      return desc;
+    // Exibe toda a descrição se o botão não estiver aparecendo
+    if (!isLargeScreen && desc.length <= 300) {
+      return desc; 
     }
-    return `${desc.substring(0, maxLength)}...`;
-  };
 
+    // Exibe a descrição truncada se o botão estiver aparecendo e a tela não for grande
+    if (!isLargeScreen && desc.length > maxLength) {
+      return isExpanded ? desc : `${desc.substring(0, maxLength)}...`;
+    }
+
+    // Exibe a descrição completa para telas grandes ou se expandida
+    return desc;
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,7 +80,8 @@ export const MyComponent: React.FC<FilmsProps> = ({ title, img, alt, desc }) => 
           <div>
             <div className='text-white text-sm flex-grow xl:text-base xl:w-[500px] ml-5 items-center'>
               {renderDesc()}
-              {!isLargeScreen && desc.length > maxLength && (
+              {/* Exibe o botão apenas se o texto tiver mais de 300 caracteres */}
+              {!isLargeScreen && desc.length > 300 && (
                 <button
                   onClick={toggleExpanded}
                   className='text-blue-500 ml-2 relative z-10'>
