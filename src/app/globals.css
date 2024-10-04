@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background-image: url('img/bgimg.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: 100vh; 
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+
+  background-attachment: scroll; 
+}
+
+.imgStatic {
+  
+}
+
+
+@media (min-width: 55px) {
+  body {
+    background-attachment: fixed; 
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
