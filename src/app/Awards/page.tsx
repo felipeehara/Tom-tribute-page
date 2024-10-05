@@ -14,11 +14,11 @@ import { Footer } from "../components/Footer";
 
 function Awards() {
   return (
-        <div className="overflow-y-auto h-[100%]">
+        <div className="overflow-y-auto h-[100%] relative flex flex-col">
             <Menu/>
             <Title/>
             <Buttons text="PREMIAÇÕES"/>
-            <div className="md:grid md:grid-cols-2 xl:grid-cols-4">
+            <div className="md:grid md:grid-cols-2 xl:grid-cols-4 ">
                     <AwardsProps img={imgEmpire} alt={'Imagem do EmpireAwards'} title="Empire Awards" year="2013"/>
                     <AwardsProps img={imgAcademy} alt={'Imagem do BritshAcademy'} title="British Academy Film Awards" year="2017"/>
                     <AwardsProps img={imgTeenChoice} alt={'Imagem do TeenChoice'} title="Teen Choice Awards" year="2017"/>
@@ -28,8 +28,9 @@ function Awards() {
                     <AwardsProps img={imgMtv} alt={'Imagem do MtvAwards2022'} title="MTV Movie e TV Awards" year="2022"/>
                     <AwardsProps img={imgKidsChoice2} alt={'Imagem do KidsChoice2022'} title="Kids' Choice Awards" year="2022"/>
             </div>
-            <Footer/>
-
+            <div className="mt-auto ">
+              <Footer/>
+             </div>
         </div>
   );
 }

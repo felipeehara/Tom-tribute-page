@@ -7,9 +7,9 @@ import TomHoland3 from '@/app/img/tomholand3.jpg';
 export const Images = () => {
     return (
         <div className="flex items-center flex-col ">
-            <div className="flex items-center flex-col ">
+            
                 <Buttons text={'Galeria'}/>
-            </div>
+           
             
                 <div className="md:flex md:flex-row">
                     <ImageStandard img={TomHoland} alt='tom'/>

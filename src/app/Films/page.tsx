@@ -16,7 +16,7 @@ export default function FilmsPage() {
 
   return (
    
-    <div className="overflow-y-auto h-[100%]">
+    <div className="overflow-y-auto h-[100%] relative">
       <Menu mt={36}/>
       <Title/>
        

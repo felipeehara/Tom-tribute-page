@@ -2,6 +2,7 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image'
 import menuIMG from '@/app/img/MENUWHITE2.png'
+import Link from 'next/link';
 
 interface menuProps {
     mt?: number;
@@ -22,9 +23,9 @@ export const Menu: React.FC<menuProps> = (mt) => {
     };
 
     return (
-        <div className='fixed md:static transition-opacity'>
+        <div className='fixed md:static transition-opacity w-full md:flex md:justify-center'>
             {isMenuOpen && ( 
-                <div ref={backGround} className={`w-screen h-screen absolute transition-opacity duration-300 backdrop-blur`}></div>
+                <div ref={backGround} className={`w-full h-screen absolute transition-opacity duration-300 backdrop-blur`}></div>
             )}
             <div className='w-10 absolute'>
                 <button className="toggle md:hidden z-50 m-2 absolute" onClick={handleClick}>
@@ -34,14 +35,14 @@ export const Menu: React.FC<menuProps> = (mt) => {
                     ref={menu} 
                     className={`h-screen w-64 bg-gradient-to-t from-black to-gray-400 top-0 left-0 pt-8 transform transition-transform duration-300 
                         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
-                        md:translate-x-0 md:relative md:flex md:w-screen md:justify-center md:mt-8 md:h-10 md:bg-none`}>
+                        md:translate-x-0 md:relative md:flex md:w-full md:justify-center md:mt-8 md:h-10 md:bg-none`}>
                     
                     <ul className="flex flex-col text-left p-3 gap-4 md:flex-row xl:p-0">
-                        <li><a href="/" className={styleMenu}>INICIO</a></li>
-                        <li><a href="./Films" className={styleMenu}>FILMES</a></li>
-                        <li><a href="./Galery" className={styleMenu}>GALERIA</a></li>
-                        <li><a href="./Career" className={styleMenu}>CARREIRA</a></li>
-                        <li><a href="./Awards" className={styleMenu}>PREMIAÇÕES</a></li>
+                        <li><Link href="/" className={styleMenu}>INICIO</Link></li>
+                        <li><Link href="./Films" className={styleMenu}>FILMES</Link></li>
+                        <li><Link href="./Galery" className={styleMenu}>GALERIA</Link></li>
+                        <li><Link href="./Career" className={styleMenu}>CARREIRA</Link></li>
+                        <li><Link href="./Awards" className={styleMenu}>PREMIAÇÕES</Link></li>
                     </ul>
                 </div>
             </div>

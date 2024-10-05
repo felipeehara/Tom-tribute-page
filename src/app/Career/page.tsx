@@ -7,7 +7,7 @@ import { Title } from "../components/Title";
 
 function Career() {
   return (
-      <div className="overflow-y-auto h-[100%]">
+      <div className="overflow-y-auto h-[100%] relative">
           <Menu/>
             <div className="flex flex-col justify-center text-center">
                 <Title/>
@@ -20,7 +20,9 @@ function Career() {
                 <ParagraphRevelationTwo/>
                 <TitleCareer title={'2015—presente: filmes de grande sucesso e estrelato:'}/>
                 <LastParagraph/>
-                <Footer/>
+              
+                  <Footer/>
+                
             </div>
         </div>
   );
