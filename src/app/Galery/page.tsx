@@ -16,7 +16,8 @@ import { Footer } from "../components/Footer";
 
 function Galery() {
   return (
-    <div >
+    <div className="overflow-y-auto h-[100%]">
+       {/* <div className=""> */}
         <Menu mt={36}/>
         <Title/>
         <Buttons text={'Galeria'}/>
