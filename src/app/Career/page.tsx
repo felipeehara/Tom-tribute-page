@@ -7,7 +7,7 @@ import { Title } from "../components/Title";
 
 function Career() {
   return (
-      <div>
+      <div className="overflow-y-auto h-[100%]">
           <Menu/>
             <div className="flex flex-col justify-center text-center">
                 <Title/>

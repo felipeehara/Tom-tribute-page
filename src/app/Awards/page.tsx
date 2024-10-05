@@ -14,7 +14,7 @@ import { Footer } from "../components/Footer";
 
 function Awards() {
   return (
-        <div>
+        <div className="overflow-y-auto h-[100%]">
             <Menu/>
             <Title/>
             <Buttons text="PREMIAÇÕES"/>

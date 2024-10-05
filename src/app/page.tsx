@@ -9,7 +9,7 @@ import { Menu } from "./components/MenuNav/Menu";
 
 function Page() {
   return (
-    <div >
+    <div className="overflow-y-auto h-[100%]">
       <Menu/>
       <Title />
       <Biography/>
