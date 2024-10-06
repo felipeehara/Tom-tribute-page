@@ -22,10 +22,18 @@ export const Menu: React.FC<menuProps> = (mt) => {
         }
     };
 
+    const closeMenu = () => {  //Função que quando clicar fora do menu ele fecha (mobile).
+        console.log('computando clique');
+        setIsMenuOpen(!isMenuOpen);  
+    }
+    
+
+  
+
     return (
         <div className='fixed md:static transition-opacity w-full md:flex md:justify-center'>
             {isMenuOpen && ( 
-                <div ref={backGround} className={`w-full h-screen absolute transition-opacity duration-300 backdrop-blur`}></div>
+                <div ref={backGround} className={`w-full h-screen absolute transition-opacity duration-300 backdrop-blur`} onClick={closeMenu}></div>
             )}
             <div className='w-10 absolute'>
                 <button className="toggle md:hidden z-50 m-2 absolute" onClick={handleClick}>
@@ -35,7 +43,9 @@ export const Menu: React.FC<menuProps> = (mt) => {
                     ref={menu} 
                     className={`h-screen w-64 bg-gradient-to-t from-black to-gray-400 top-0 left-0 pt-8 transform transition-transform duration-300 
                         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} 
-                        md:translate-x-0 md:relative md:flex md:w-full md:justify-center md:mt-8 md:h-10 md:bg-none`}>
+                        md:translate-x-0 md:relative md:flex md:w-full md:justify-center md:mt-8 md:h-10 md:bg-none`}
+                        
+                    >
                     
                     <ul className="flex flex-col text-left p-3 gap-4 md:flex-row xl:p-0">
                         <li><Link href="/" className={styleMenu}>INICIO</Link></li>
