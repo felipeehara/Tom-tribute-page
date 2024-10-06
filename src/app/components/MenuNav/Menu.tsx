@@ -31,9 +31,9 @@ export const Menu: React.FC<menuProps> = (mt) => {
   
 
     return (
-        <div className='fixed md:static transition-opacity w-full md:flex md:justify-center'>
+        <div className='fixed md:static transition-opacity w-full md:flex md:justify-center z-30 '>
             {isMenuOpen && ( 
-                <div ref={backGround} className={`w-full h-screen absolute transition-opacity duration-300 backdrop-blur`} onClick={closeMenu}></div>
+                <div ref={backGround} className={`w-full h-screen absolute transition-opacity duration-300 backdrop-blur `} onClick={closeMenu}></div>
             )}
             <div className='w-10 absolute'>
                 <button className="toggle md:hidden z-50 m-2 absolute" onClick={handleClick}>
