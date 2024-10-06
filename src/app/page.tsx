@@ -6,12 +6,12 @@ import { Images } from "./components/Images";
 import { Video } from "./components/Video";
 import { Footer } from "./components/Footer";
 import { Menu } from "./components/MenuNav/Menu";
+import { Header } from "./components/Header/Header";
 
 function Page() {
   return (
     <div className="overflow-y-auto h-[100%] relative">
-      <Menu/>
-      <Title />
+      <Header/>
       <Biography/>
       <BestFilms/>
       <Images/>

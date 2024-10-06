@@ -12,15 +12,13 @@ import TomHoland10 from '@/app/img/tomholand10.jpg';
 import TomHoland11 from '@/app/img/tomholand11.png';
 import { Title } from "../components/Title";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header/Header";
 
 
 function Galery() {
   return (
     <div className="overflow-y-auto h-[100%] relative w-full">
-       {/* <div className=""> */}
-      
-          <Menu mt={36}/>
-          <Title/>
+        <Header/>
           <Buttons text={'Galeria'}/>
 
         <div className="flex flex-col items-center mt-10  

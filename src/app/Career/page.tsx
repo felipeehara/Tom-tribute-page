@@ -1,6 +1,7 @@
 import { Born,LastParagraph, ParagraphDance, ParagraphDanceTwo, ParagraphRevelation, ParagraphRevelationTwo} from "../components/CompCareer/PropsTextCareer";
 import { TitleCareer } from "../components/CompCareer/TextCareer";
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header/Header";
 import { Menu } from "../components/MenuNav/Menu";
 import { Title } from "../components/Title";
 
@@ -8,9 +9,9 @@ import { Title } from "../components/Title";
 function Career() {
   return (
       <div className="overflow-y-auto h-[100%] relative">
-          <Menu/>
+          <Header/>
             <div className="flex flex-col justify-center text-center">
-                <Title/>
+                
                 <Born/>
                 <TitleCareer title={'2006—2013: Início, destaque em Billy Elliot e estreia no cinema:'}/>
                 <ParagraphDance/>

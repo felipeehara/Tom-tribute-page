@@ -6,6 +6,7 @@ import { Buttons } from '../components/Buttons';
 import { FilmAvengersInfinityWar, FilmChefSnow, FilmCherry, FilmCivilWar, FilmCurrentWar, FilmDolittle, FilmEdgeWinter, FilmEverydayDevil, FilmFarhome, FilmHeartOfTheSea, FilmHomeComing, FilmHowLiveNow, FilmImpossible, FilmLocke, FilmLostCity, FilmNoReturnHome, FilmPilgrimage, FilmUncharted, FilmWolfHall, FilmWorldChaos } from '../components/importFilms';
 import { Footer } from '../components/Footer';
 import { MyComponent } from '../components/ComponentTeste';
+import { Header } from '../components/Header/Header';
 
 export default function FilmsPage() {
   const router = useRouter();
@@ -17,8 +18,7 @@ export default function FilmsPage() {
   return (
    
     <div className="overflow-y-auto h-[100%] relative">
-      <Menu mt={36}/>
-      <Title/>
+      <Header/>
        
        <Buttons text='FILMES'/>
        <FilmImpossible/>

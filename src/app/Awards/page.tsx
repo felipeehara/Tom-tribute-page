@@ -11,12 +11,12 @@ import imgKidsChoice from '@/app/img/kidsaward.png'
 import imgMtv from '@/app/img/mtvaward.webp'
 import imgKidsChoice2 from '@/app/img/nickchocie.jpg'
 import { Footer } from "../components/Footer";
+import { Header } from "../components/Header/Header";
 
 function Awards() {
   return (
         <div className="overflow-y-auto h-[100%] relative flex flex-col">
-            <Menu/>
-            <Title/>
+            <Header/>
             <Buttons text="PREMIAÇÕES"/>
             <div className="md:grid md:grid-cols-2 xl:grid-cols-4 ">
                     <AwardsProps img={imgEmpire} alt={'Imagem do EmpireAwards'} title="Empire Awards" year="2013"/>
