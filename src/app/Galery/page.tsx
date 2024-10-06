@@ -20,8 +20,7 @@ function Galery() {
         <Header/>
           <Buttons text={'Galeria'}/>
 
-        <div className="flex flex-col items-center mt-10  
-               md:grid md:grid-cols-2 lg:grid-cols-3 md:mx-32 md:sticky col-span-5 xl:grid-cols-4 gap-0 ">
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-0 items-center mt-10 md:mx-32 md:sticky top-0 grid justify-items-center align-items-center">
                 <ImageStandard img={TomHoland4} alt='tom'/>
                 <ImageStandard img={TomHoland5} alt='tom'/>
                 <ImageStandard img={TomHoland6} alt='tom'/>
