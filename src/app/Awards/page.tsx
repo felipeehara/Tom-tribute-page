@@ -1,7 +1,5 @@
 import { AwardsProps } from "../components/Awards/PropsAwards";
 import { Buttons } from "../components/Buttons";
-import { Menu } from "../components/MenuNav/Menu";
-import { Title } from "../components/Title";
 import imgEmpire from '@/app/img/empireawards.jpg'
 import imgAcademy from '@/app/img/bafta.jpg'
 import imgTeenChoice from '@/app/img/teenchoice.png'

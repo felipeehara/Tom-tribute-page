@@ -2,8 +2,6 @@ import { Born,LastParagraph, ParagraphDance, ParagraphDanceTwo, ParagraphRevelat
 import { TitleCareer } from "../components/CompCareer/TextCareer";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header/Header";
-import { Menu } from "../components/MenuNav/Menu";
-import { Title } from "../components/Title";
 
 
 function Career() {

@@ -1,6 +1,5 @@
 import { Buttons } from "../components/Buttons";
 import { ImageStandard } from "../components/Images";
-import { Menu } from "../components/MenuNav/Menu";
 
 import TomHoland4 from '@/app/img/tomholand4.png';
 import TomHoland5 from '@/app/img/tomholand5.png';

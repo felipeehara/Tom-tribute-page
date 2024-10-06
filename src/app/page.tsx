@@ -1,5 +1,4 @@
 
-import { Title } from "./components/Title";
 import { Biography } from "./components/Biography";
 import { BestFilms } from "./components/BestFilms";
 import { Images } from "./components/Images";
